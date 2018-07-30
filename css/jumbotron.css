@@ -1,0 +1,138 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-bottom: 20px;
+}
+
+.main{
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: 18%;
+}
+.back {
+    position: fixed;
+    right: 0;
+    top: 150px;
+    border-radius: 5px 0px 0px 5px;
+    color: #ed613b;
+    background-color: #fff;
+    padding: 20px 5px 10px 10px;
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+.back:hover {
+    color: #ed613b;
+    text-decoration: none;
+}
+footer{
+font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #656565;
+    border-bottom: #656565 1px solid;
+    border-top: #656565 1px solid;
+	    margin: 60px auto;
+}
+
+footer p{
+	padding: 20px 0;
+	margin: 0;
+    text-align: center;
+}
+
+.youh{
+	height: 222.84px;
+}
+@media (max-width: 1200px){
+	.youh{
+	height: 181.31px;
+}
+}
+
+@media (max-width: 991px){
+.main {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+}
+.youh{
+	height: 468.88px;
+}
+
+}
+
+@media (min-width: 768px){
+.main{
+    width: 30%;
+    height: 300px;
+}
+}
+
+@media (max-width: 736px){
+.main {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+}
+		.youh{
+	height: 405.92px;
+}
+}
+
+@media (max-width: 474px){
+.main {
+    width: 80%;
+    height: 530px;
+    margin: auto;
+    padding-top: 250px;
+    box-sizing: border-box;
+}
+	.main img{
+		width: 100%;
+	}
+	.youh{
+	height: 271.95px;
+}
+}
+
+@media (max-width: 474px){
+.youh{
+	height: 234.44px;
+}
+}
+
+@media (max-width: 320px){
+	.jumbotron p {
+    margin-bottom: 5px;
+    font-size: 17px;
+    font-weight: 200;
+    color: white;
+    text-shadow: 0px 0px 14px #212121;
+    line-height: 24px;
+}
+	.main {
+		width: 100%;}
+	.youh{
+	height: 180.84px;
+}
+}
+
+.svg-arrow {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%); 
+}
+@media (max-width: 768px) {
+    .svg-arrow {
+    display: block;
+    }
+}

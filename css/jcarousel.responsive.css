@@ -1,0 +1,242 @@
+/** Carousel **/
+@charset "utf-8";
+.js-kv-div {
+    visibility: hidden;
+    filter: alpha(opacity=000);
+    -moz-opacity: 0.00;
+    opacity: 0.00;
+}
+.sh__kv-div {
+    min-height: 100%;
+}
+.kv {
+    position: relative;
+    overflow: hidden;
+}
+.kv__img {
+   // z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    filter: alpha(opacity=000);
+    -moz-opacity: 0.0;
+    opacity: 0.0;
+
+    -webkit-transition  : opacity 6000ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+    -moz-transition     : opacity 6000ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+    -ms-transition      : opacity 6000ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+    -o-transition       : opacity 6000ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+    transition          : opacity 6000ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+}
+.kv__img img {
+    -moz-transform: scale(1.2,1.2) ;
+    -webkit-transform: scale(1.2,1.2) ;
+    -o-transform: scale(1.2,1.2) ;
+    -ms-transform: scale(1.2,1.2) ;
+    transform: scale(1.2, 1.2) ;
+    width:1620px
+}
+.js-slider {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+.js-fade {
+    -webkit-transition  : -webkit-transform 10600ms cubic-bezier(0, 0, 1, 1);
+    -moz-transition     : -moz-transform 10600ms cubic-bezier(0, 0, 1, 1);
+    -ms-transition      : -ms-transform 10600ms cubic-bezier(0, 0, 1, 1);
+    -o-transition       : -o-transform 10600ms cubic-bezier(0, 0, 1, 1);
+    transition          : transform 10600ms cubic-bezier(0, 0, 1, 1);
+
+    -moz-transform: scale(1,1) !important;
+    -webkit-transform: scale(1,1) !important;
+    -o-transform: scale(1,1) !important;
+    -ms-transform: scale(1,1) !important;
+    transform: scale(1, 1) !important;
+}
+.kv__img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.fristveiw{
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 20%;
+    margin: auto;
+}
+@media (min-width: 415px) and (max-width: 1024px){
+    .fristveiw{
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 1%;
+    margin: auto;
+}
+#header {
+    width: 100%;
+    position: absolute;
+    top: 330px;
+}
+}
+@media (min-width: 1025px) and (max-width: 1280px){
+    .fristveiw{
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 1%;
+    margin: auto;
+}
+}
+@media (min-width: 1281px) and (max-width: 1366px){
+    .fristveiw{
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 5%;
+    margin: auto;
+}
+}
+@media (min-width: 1367px) and (max-width: 1440px){
+    .fristveiw{
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 15%;
+    margin: auto;
+}
+}
+@media (min-width: 1441px) and (max-width: 1680px){
+    .fristveiw{
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 14%;
+    margin: auto;
+}
+}
+@media (min-width: 1681px) and (max-width: 1920px){
+    .fristveiw{
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 18%;
+    margin: auto;
+}
+}
+@media (max-width: 768px) and (min-width: 415px){
+    .fristveiw{
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 20%;
+    margin: auto;
+}
+}
+@media (max-width: 414px) and (min-width: 376px){
+    .fristveiw{
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 12%;
+    margin: auto;
+}
+}
+@media (max-width: 375px) and (min-width: 321px){
+    .fristveiw{
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 10%;
+    margin: auto;
+}
+}
+@media (max-width: 320px){
+    .fristveiw{
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 7%;
+    margin: auto;
+}
+}
+
+
+/*ipad pro*/ 
+@media (min-height: 1365px) and (min-height: 1366px) and (max-width: 1024px) and (min-width: 1023px){
+.fristveiw {
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 26%;
+    margin: auto;
+}
+}

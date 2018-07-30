@@ -1,0 +1,414 @@
+@import "compass";
+@import "breakpoint";
+@import "compass/css3/transform";
+@import "compass/css3/box-shadow";
+@import "compass/css3/filter";
+@import "compass/reset";
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+
+@mixin shadow ($style,$style2) {
+  @include box-shadow($style,$style2);
+}
+@mixin center($top,$left) {
+  top: $top;
+  left: $left;
+  transform:translateY(-$top) translateX(-$left);  
+}
+
+$pc1366: max-width 1720px;
+$pc1300: max-width 1340px;
+$pc1200: max-width 1200px; //icon
+$pc: max-width 990px;
+$ipad: max-width 768px;
+$iphone: max-width 720px;
+$iphone5: max-width 321px;
+
+body {
+  background-color: #fffcf4;
+}
+html,button,input {
+  font-family: 'cwTeXHei', sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #333;
+  outline:none;
+  overflow-x:hidden; 
+}
+.loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #333 url("../images/loading.gif") no-repeat center center;
+}
+.part1 {
+    position: relative; 
+    top: 50%;
+    transform: translateY(-50%);
+    @include breakpoint($pc1300) {
+      display: none;
+    }
+}
+.in-wapper{
+    position: absolute;
+    z-index: 5;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    width: 325px;
+    background-color: #eb613b;
+    @include breakpoint($pc1300) {
+      width: 0;
+      height: 0;
+    }
+    .tittle {
+    width: 265px;
+    margin: 0% auto 10% auto;
+      @include breakpoint($pc1366) {    
+              margin-bottom: 0px;  
+      }
+      img {
+        margin-bottom: 30px; 
+          @include breakpoint($pc1366) {    
+              margin-bottom: 15px;  
+          }
+      }
+      .add {
+        margin-bottom: 30px;
+          @include breakpoint($pc1366) {    
+              margin-bottom: 15px;     
+          }
+      }
+      p {
+        color: #fff;
+      } 
+    }
+      .logo {
+        width: 200px;
+        margin: auto;
+        position: absolute;
+        bottom: 20;
+        left: 50%;
+        transform: translateX(-50%);
+      @include breakpoint($pc1366) {    
+          width: 150px;  
+      }
+        img {
+          width: 100%;
+        }
+      }
+}
+      .tittle-img {
+        display: flex;
+        justify-content: space-between;
+          img {
+            cursor: pointer;
+          }
+      }
+      .tittle-img2 {
+        display: flex;
+        justify-content: space-between;
+          img {
+            cursor: pointer;
+          }
+      }
+.wapper {
+  position: absolute;
+  width: 100%;
+}
+section {
+  width: 100%;
+  position: relative; 
+}
+.container {
+    width: 1170px;
+    padding:1% 0% 1% 0%; 
+    margin: auto;
+    @include breakpoint($ipad) {
+        width: 100%;
+    }
+    @include breakpoint($pc1200) {
+        width: 100%;
+
+    }    
+}
+.infront {
+    text-align: center;
+    color: #fff;
+        padding-bottom: 10%;
+    @include breakpoint($iphone5) {
+      padding-bottom: 1%;
+    }
+    .add {
+      padding-bottom: 15px;
+    }
+}
+ .link {
+    width: 25%;
+    line-height: 100px;
+    background-color: #fff;
+    color: #eb613b;
+    text-align: center;
+    border-right: #eb613b 1px solid;
+    border-bottom: #eb613b 1px solid;
+}
+.link2 {
+    width: 50%;
+    line-height: 100px;
+    background-color: #fff;
+    color: #eb613b;
+    text-align: center;
+    border-right: #eb613b 1px solid;
+}
+a.link2 {
+    width: 50%;
+    line-height: 100px;
+    background-color: #fff;
+    color: #eb613b;
+    text-align: center;
+    border-right: #eb613b 1px solid; 
+    text-decoration: none; 
+}
+@mixin bgcolor($color) {
+    .text {
+      width: 40%;
+      position: relative;
+        @include breakpoint($pc) {
+          width: 100%
+        }
+      .tittle {
+        display: flex;
+        background-color: $color;
+    } 
+  } 
+}
+.article {
+  flex-direction: row;
+  @include bgcolor(#eae5db);
+}
+.article2 {
+  flex-direction: row-reverse;
+  background-color: #bae560;
+  @include bgcolor(#9dd22c);
+}
+.article3 {
+  flex-direction: row;
+  background-color: #fcdc5a;
+  @include bgcolor(#facf1c);
+} 
+.article4 {
+  flex-direction: row-reverse;
+  background-color: rgba(218, 147, 65, 0.8);
+  @include bgcolor(#e69f54);
+}
+.article,.article2,.article3,.article4 {
+    display: flex;
+    @include breakpoint($pc) {
+      flex-direction: column;
+    }
+    .photo {
+      width: 60%;
+      @include breakpoint($pc) {
+        width: 100%
+      }
+    } 
+        .cotittle2 {
+          width: 20%;
+        }
+        .cotittle {
+          width: 80%;
+          margin: auto;
+          font-size: 1.3rem;
+          line-height: 35px;
+            @include breakpoint($pc1366) {
+                  font-size: 1.1rem;
+                  line-height: 25px;
+                  width: 75%
+            }
+            @include breakpoint($pc1300) {
+                  font-size: 1rem;
+                  line-height: 25px;
+            }
+            @include breakpoint($pc) {
+                  font-size: 1.3rem;
+                  line-height: 35px;
+            }
+            @include breakpoint($iphone) {
+                  font-size: 1rem;
+                  line-height: 20px;
+            }
+          p {
+              width: 60%;
+              margin: auto;
+              @include breakpoint($pc1366) {
+                  width: 72%;
+              }
+              @include breakpoint($pc1300) {
+                  width: 90%;
+              }
+              @include breakpoint($pc) {
+                  width: 65%;
+              }
+              @include breakpoint($iphone) {
+                  width: 100%;
+                  text-align: center;
+              }
+          }
+      }
+}
+.article-link {
+   text-align: center;
+    position: relative;
+    top: 35px;
+    transform: translateY(0px);
+      @include breakpoint($pc1366) {
+        top: 10px;
+        margin: 2% auto;
+      } 
+      @include breakpoint($pc1300) {
+        top: 0;
+      }
+      @include breakpoint($iphone) {
+        margin: 10% auto;
+      }          
+  .Origin {
+    width: 130px;
+    margin: auto;
+      @include breakpoint($pc1366) {
+          width: 130px;
+      }
+      @include breakpoint($pc) {
+          width: 130px;
+      }
+      @include breakpoint($iphone) {
+          width: 100px;
+      }      
+  }
+  a {
+      text-decoration: none;
+      color: #000;
+  }
+  p {
+    width: 350px;
+    padding: 10px 0px;
+    margin: 30px auto;
+    font-size: 1.3rem;
+    border: #000 1px solid;
+    border-radius: 50px;
+      @include breakpoint($pc1366) {
+          margin: 15px auto;
+          font-size: 1.1rem;
+          padding: 6px 0px;
+      }
+      @include breakpoint($pc1300) {
+          width: 300px;
+          padding: 5px 0px;
+          font-size: 1rem;
+      }
+      @include breakpoint($pc) {
+          width: 350px;
+          padding: 10px 0px;
+          margin: 20px auto;
+          font-size: 1.3rem;
+      }
+      @include breakpoint($iphone) {
+          width: 250px;
+          padding: 5px 0px;
+          margin: 20px auto;
+          font-size: 1rem;
+      } 
+    &:hover {
+      background-color: #fff;
+      color: #000;
+      border: #fff 1px solid;
+      cursor: pointer;
+    }
+  }
+}
+.icon {
+    width: 100px;
+    position: absolute;
+    right: 3%;
+    bottom: 24%;
+    @include breakpoint($pc1366) {
+      width: 60px;
+    }
+    @include breakpoint($pc1200) {
+      display: none;
+    }
+    @include breakpoint($pc) {
+      display: block;
+      top: 420px;
+    }
+    @include breakpoint($iphone) {
+      top: 130px;
+      width: 80px;
+    } 
+    @include breakpoint($iphone5) {
+      width: 80px;
+      top: 105px;
+      right: 3%;
+    }
+    img {
+      position: absolute;
+    }
+}
+.footer {
+  background-color: #fff;
+  text-align: center;
+  color: #827464;
+  @include breakpoint($iphone) {
+    font-size: 0.8rem;
+  }
+}
+#include {
+  display: none;
+  @include breakpoint($pc1300) {
+    display: block;
+  } 
+}
+.svg-arrow {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 5;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    @include breakpoint($pc1300) {
+      display: block;
+    }  
+}
+#include {
+  text-align: center;
+    width: 250px;
+    top: 50%;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.share {
+    position: absolute;
+    z-index: 5;
+    bottom: -1px;
+    right: -1px;
+    height: 52px;
+    cursor: pointer;
+}
+.sahre-icon {
+    display: inline-block;
+    width: 60px;
+    height: 52px;
+    margin-right: -4px;
+}
+.fb {
+    background-image: url(http://www.sunnyhills.com.tw/images/share/bt_share_fb.svg);
+}
+.line {
+    background-image: url(https://topic.cw.com.tw/event/2017sunnyhills/images/article/bt_share_line.svg);    
+}

@@ -1,0 +1,210 @@
+@import "compass";
+@import "breakpoint";
+@import "compass/css3/transform";
+@import "compass/css3/box-shadow";
+@import "compass/css3/filter";
+@import "compass/reset";
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+
+@mixin shadow ($style,$style2) {
+  @include box-shadow($style,$style2);
+}
+@mixin center($top,$left) {
+  top: $top;
+  left: $left;
+  transform:translateY(-$top) translateX(-$left);  
+}
+
+$pc: max-width 1280px; 
+$ipad: max-width 830px;
+$iphone: max-width 415px;
+$iphone5: max-width 321px;
+
+body {
+  background-color: #fed73f;
+    @include breakpoint($iphone) {
+         background-color: #fff; 
+    }
+}
+a {
+  text-decoration: none;
+}
+html,button,input {
+  font-family: 'cwTeXHei', Microsoft JhengHei, sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #333;
+  outline:none;
+}
+.br {
+  height: 20px;
+}
+section {
+  position: relative;
+}
+.background-photo {
+    background-image: url(../images/article/0.jpg);
+    height: 80vh;
+    background-position: center center;
+    background-size: cover;
+    @include breakpoint($iphone) {
+      height: 300px;
+      background-position: center center;
+      background-size: cover;      
+    }
+}
+.background-photo1 {
+    background-image: url(../images/article/pic2-4.jpg);
+    height: 80vh;
+    background-position: center center;
+    background-size: cover;
+    @include breakpoint($iphone) {
+      height: 300px;
+      background-position: center center;
+      background-size: cover;      
+    }
+}
+.background-photo2 {
+    background-image: url(../images/article/pic3-1.jpg);
+    height: 80vh;
+    background-position: center center;
+    background-size: cover;
+    @include breakpoint($iphone) {
+      height: 300px;
+      background-position: center center;
+      background-size: cover;      
+    }
+}
+.background-photo3 {
+    background-image: url(../images/article/pic4-1.jpg);
+    height: 80vh;
+    background-position: center center;
+    background-size: cover;
+    @include breakpoint($iphone) {
+      height: 300px;
+      background-position: center center;
+      background-size: cover;      
+    }
+}
+.container {
+  width: 700px;
+  padding: 0px 55px;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+    left: 50%;
+    top: -40px;
+    transform: translateX(-50%);
+  @include breakpoint($ipad) {
+    width: 100%;
+    padding: 0px;
+  }
+}
+.footer {
+    text-align: center;
+    margin: auto;
+    width: 700px;
+    padding: 50px 55px;
+    font-size: 13px;
+  @include breakpoint($ipad) {
+    width: 100%;
+    padding: 20px 0px 40px 0px; 
+  }
+    @include breakpoint($iphone) {
+         background-color: #fed73f; 
+    }  
+}
+.part1 {
+  
+  .tittle {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 35%;
+    left: 50%;
+    cursor: pointer;
+    transform: translateX(-50%) translateY(0);
+    @include breakpoint($pc) {
+        width: 40%;
+    }
+    @include breakpoint($iphone) {
+        width: 70%;
+    }
+  }
+  .background-photo {
+    img {
+      width: 100%;
+      height: 80vh;
+      @include breakpoint($iphone) {
+        height: 25vh;
+      }
+    }
+  }
+}
+.add-bottom {
+  padding-bottom: 50px;
+}
+  .photo {
+    width: 100%;
+  }
+  .text {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0px 50px 0px;
+    @include breakpoint($iphone) {
+        width: 90%;
+        margin: auto;
+    }
+    p {
+      line-height: 30px;
+    }
+  }
+    .icon {
+      padding-top: 10px;
+    }
+.back {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.66);
+    color: #f06445;
+    z-index: 5;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 5px;
+    padding: 10px 15px 10px 20px;
+    right: 0;
+    top: 500px;
+    @include breakpoint($ipad) {
+      padding: 10px 15px 10px 15px;
+      width: 14px;
+      top: 20px;
+      border-radius: 5px 0px 0px 5px;
+    }
+    &:hover {
+      @include transition(background-color 0.3s, padding 0.3s);
+      background-color: rgba(255, 255, 255, 1);
+      padding: 10px 20px 10px 20px;
+    }
+}
+.share {
+    position: absolute;
+    z-index: 8;
+    bottom: 0;
+    right: 0;
+    height: 52px;
+    cursor: pointer;
+    @include breakpoint($ipad) {
+      bottom: -12px;
+    }
+}
+.sahre-icon {
+    display: inline-block;
+    width: 60px;
+    height: 52px;
+    margin-left: -4px;
+}
+.fb {
+    background-image: url(http://www.sunnyhills.com.tw/images/share/bt_share_fb.svg);
+}
+.line {
+    background-image: url(https://topic.cw.com.tw/event/2017sunnyhills/images/article/bt_share_line.svg);    
+}

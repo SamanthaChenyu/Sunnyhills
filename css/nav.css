@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+}
+
+main {
+    width: 100%;
+    background-color: rgb(235, 97, 59);
+    box-shadow: 2px 2px 10px rgba(95, 95, 95, 0.36);
+    height: 60px;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+  }
+  
+
+menu input[type=checkbox] {
+  display: none;
+}
+menu input[type=checkbox]:checked ~ hamburger > i {
+  background-color: transparent;
+  transform: rotate(90deg);
+}
+menu input[type=checkbox]:checked ~ hamburger > i:before {
+  transform: translate(-50%, -50%) rotate(315deg);
+}
+menu input[type=checkbox]:checked ~ hamburger > i:after {
+  transform: translate(-50%, -50%) rotate(-315deg);
+}
+menu input[type=checkbox]:checked ~ hamburger close {
+  color:rgb(253, 253, 253);
+  width: 100%;
+}
+menu input[type=checkbox]:checked ~ hamburger open {
+  color: transparent;
+  width: 0;
+}
+menu hamburger {
+    position: fixed;
+    display: block;
+    height: 25px;
+    width: 41px;
+    z-index: 1;
+    left: 20;
+    top: 15;
+}
+menu hamburger:hover {
+  cursor: pointer;
+  z-index: 2;
+}
+menu hamburger text close,
+menu hamburger text open {
+  text-transform: uppercase;
+  font-size: .8em;
+  align-text: center;
+  position: absolute;
+  transform: translateY(50px);
+  text-align: center;
+  overflow: hidden;
+  transition: width .25s .35s, color .45s .35s;
+}
+menu hamburger text close {
+  color: transparent;
+  right: 0;
+  width: 0;
+}
+menu hamburger text open {
+  color: rgb(253, 253, 253);
+  width: 100%;
+}
+menu hamburger > i {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  top: 50%;
+  background-color:#fff;
+  pointer-events: auto;
+  transition-duration: .35s;
+  transition-delay: .35s;
+}
+menu hamburger > i:before, menu hamburger > i:after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  left: 50%;
+  background: rgb(253, 253, 253);
+  content: "";
+  transition: transform 0.35s;
+  transform-origin: 50% 50%;
+}
+menu hamburger > i:before {
+  transform: translate(-50%, -9px);
+}
+menu hamburger > i:after {
+  transform: translate(-50%, 9px);
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+label {
+  cursor: pointer;
+}
+label:focus {
+  outline: none;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #eb613b;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0, -100%, 0);
+    transition: transform 0.35s;
+    z-index: 1;
+}
+.menu label.menu-toggle {
+  position: absolute;
+  right: 0px;
+  width: 60px;
+  height: 60px;
+  line-height: 0px;
+  display: block;
+  padding: 0;
+  text-indent: -9999px;
+  background: #fff url(https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png) 50% 50%/25px 25px no-repeat;
+}
+.menu ul li > label {
+  background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-right-b-128.png) 95% 50%/16px 16px no-repeat;
+}
+.menu ul li a, .menu ul li label {
+  display: block;
+  text-align: center;
+  padding: 0 20px;
+  line-height: 45px;
+  text-decoration: none;
+  color:rgb(253, 253, 253);
+  font-size: 25px;
+    letter-spacing: 3px;
+}
+.menu ul li a:hover, .menu ul li label:hover {
+  color:#cecece;
+}
+
+/* hide inputs */
+.menu-checkbox {
+  display: none;
+}
+
+/* hide navigation icon for sublabels */
+.menu .menu label.menu-toggle {
+  background: none;
+}
+
+/* fade in checked menu */
+.menu-checkbox:checked + .menu {
+  transform: translate3d(0, 0, 0);
+  z-index: 1;
+}
+
+/* for show */
+html, body {
+  height: 100%;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+#info {
+  display: table;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+}
+#info #info-content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px;
+}
+#info #info-content h1 {
+  color: #fff;
+  border: 3px solid #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 22px;
+  font-weight: normal;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+}
+#info #info-content h1 strong {
+  display: block;
+  font-size: 26px;
+}
+.mb-ul {
+  bottom:0;
+  position: absolute;
+}
+section.part1-mb {
+  display: none
+}
+@media(max-width: 1340px) {
+  section.part1-mb {
+    display: block;
+  }
+}
+
